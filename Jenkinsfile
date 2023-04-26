@@ -14,7 +14,6 @@ pipeline {
         }
        }
     }
-
  stage('clean container') {
       steps {
        sh 'docker ps -f name=${dockerContainerName} -q | xargs --no-run-if-empty docker container stop'
