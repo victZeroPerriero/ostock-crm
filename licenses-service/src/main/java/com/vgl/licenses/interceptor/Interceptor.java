@@ -21,7 +21,6 @@ public class Interceptor implements HandlerInterceptor {
          while (headerNames.hasMoreElements()){
                 String name = headerNames.nextElement();
                 LOGGER.info("header name {}", name);
-
             }
             LOGGER.info("interceptor sending request before controller {}", request.getRequestURI());
         } else {
