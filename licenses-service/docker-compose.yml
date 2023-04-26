@@ -3,6 +3,7 @@ version: '3.8'
 services:
   api:
     build: .
+    container_name: licenseapi
     ports:
       - '8088:8088'
-    container_name: licenseapi
+
