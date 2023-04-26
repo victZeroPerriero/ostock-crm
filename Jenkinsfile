@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
        steps {
-   withMaven(maven: 'MAVEN_ENV') {
+   withMaven(maven: 'Jenkins-Maven') {
             sh "mvn ${MAVEN_ARGS}"
         }
        }
