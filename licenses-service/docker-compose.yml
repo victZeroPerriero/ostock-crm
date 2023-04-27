@@ -4,7 +4,7 @@ services:
   api:
     build: .
     image: ostock-crm/license-service
-    container_name: licenseapi
+    container_name: license-api
     ports:
       - '8088:8088'
 
