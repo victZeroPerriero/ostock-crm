@@ -2,9 +2,11 @@ package com.vgl.licenses.model;
 
 import lombok.Builder;
 import lombok.Data;
-@Builder
+import org.springframework.hateoas.RepresentationModel;
+
+//@Builder
 @Data
-public class License {
+public class License extends RepresentationModel<License> {
     private Integer id;
     private String licenseId;
     private String description;

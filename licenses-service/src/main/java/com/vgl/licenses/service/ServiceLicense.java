@@ -13,14 +13,24 @@ import java.util.UUID;
 public class ServiceLicense {
     private final MessageSource messageSource;
     public License getLicense(String licenseId, String organizationId){
-       return License.builder()
-               .id(UUID.randomUUID().variant())
-               .licenseId(licenseId)
-               .organizationId(organizationId)
-               .description("Software product")
-               .productName("O-stock")
-               .licenseType("full")
-               .build();
+//       return License.builder()
+//               .id(UUID.randomUUID().variant())
+//               .licenseId(licenseId)
+//               .organizationId(organizationId)
+//               .description("Software product")
+//               .productName("O-stock")
+//               .licenseType("full")
+//               .build();
+       License license = new License();
+       license.setId(UUID.randomUUID().variant());
+       license.setLicenseId(licenseId);
+       license.setOrganizationId(organizationId);
+       license.setDescription("Software product");
+       license.setProductName("O-stock");
+       license.setLicenseType("full");
+       return license;
+
+
     }
     public String create(License license, String organizationId, Locale locale){
         String responseMessage=null;
