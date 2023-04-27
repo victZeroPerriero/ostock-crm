@@ -46,12 +46,19 @@
     </dependencies>
 
     <build>
-        <finalName>license-service</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <image>
+                        <name>
+                            ${docker.image.prefix}/${project.artifactId}:latest
+                        </name>
+                    </image>
+                    <layers>
+                        <enabled>true</enabled>
+                    </layers>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
